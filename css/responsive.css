@@ -1,0 +1,31 @@
+/* Extra breakpoint refinements beyond component-level rules in style.css */
+
+@media (max-width: 1024px) {
+  .masonry { columns: 3 200px; }
+}
+
+@media (max-width: 768px) {
+  .grid-2 { grid-template-columns: 1fr; gap: 1.75rem; }
+  .about-pillars { grid-template-columns: 1fr 1fr; }
+  .masonry { columns: 2 200px; }
+  section { padding: 3rem 0; }
+  .stats-grid { row-gap: 2rem; }
+}
+
+@media (max-width: 425px) {
+  .container { padding: 0 1.1rem; }
+  .hero-cta-row { flex-direction: column; align-items: stretch; }
+  .hero-cta-row .btn { width: 100%; justify-content: center; }
+  .hero-meta { gap: 1.1rem; flex-wrap: wrap; }
+  .masonry { columns: 1; }
+  .course-actions { flex-direction: column; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; }
+}
+
+@media (max-width: 375px) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.6rem; }
+}
+
+/* Guard against horizontal scroll on very narrow viewports */
+html, body { overflow-x: hidden; }
